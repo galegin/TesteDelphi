@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2021/06/01 19:30:27.000.775,=rtl.dcp</Transaction>
+    <Transaction>2021/06/01 19:30:57.000.584,C:\Users\galeg\Documents\Embarcadero\Studio\Projects\Package1.dproj=C:\Projetos\Delphi\Sabium\Teste\Exercicio3\Package1.dproj</Transaction>
+    <Transaction>2021/06/01 19:31:26.000.625,=C:\Projetos\Delphi\Sabium\Teste\Exercicio3\Unit1.pas</Transaction>
+    <Transaction>2021/06/01 19:32:13.000.707,C:\Projetos\Delphi\Sabium\Teste\Exercicio3\Unit1.pas=C:\Projetos\Delphi\Sabium\Teste\Exercicio3\uclsProperEdit.pas</Transaction>
+    <Transaction>2021/06/01 19:38:23.000.740,=vcl.dcp</Transaction>
+  </Transactions>
+</BorlandProject>

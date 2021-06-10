@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2021/06/01 19:29:48.000.342,=C:\Users\galeg\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/06/01 19:42:28.107,=C:\Users\galeg\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/06/01 19:49:51.086,C:\Projetos\Delphi\Sabium\Teste\Exercicio4\Unit1.dfm=C:\Users\galeg\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2021/06/01 19:49:51.086,C:\Projetos\Delphi\Sabium\Teste\Exercicio4\Unit1.pas=C:\Users\galeg\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/06/01 19:49:52.309,C:\Projetos\Delphi\Sabium\Teste\Exercicio4\Project1.dproj=C:\Users\galeg\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+  </Transactions>
+</BorlandProject>

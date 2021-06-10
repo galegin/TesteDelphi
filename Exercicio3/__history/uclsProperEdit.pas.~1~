@@ -1,0 +1,12 @@
+unit uclsProperEdit;
+
+interface
+
+type
+  TProperEdit = class(TEdit)
+  public
+  end;
+
+implementation
+
+end.

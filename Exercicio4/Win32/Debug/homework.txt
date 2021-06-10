@@ -1,0 +1,4 @@
+Escreva um programa WordCount que conte as palavras em um ou
+mais arquivos e comece uma nova thread para cada contagem. Por
+exemplo, caso sejam selecionados 3 arquivos:report.txt, address.txt,
+homework.txt, o programa deverá iniciar 3 threads e poderá exibir

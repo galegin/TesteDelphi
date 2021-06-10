@@ -1,0 +1,123 @@
+unit Unit1;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TForm1 = class(TForm)
+    Button1: TButton;
+    Memo1: TMemo;
+    procedure Button1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+type
+  RLetra = record
+    letra : string;
+    qtde : integer;
+  end;
+
+  RLetraArray = Array of RLetra;
+
+var
+  gLetras : RLetraArray;
+
+  procedure Limpar();
+  begin
+    SetLength(gLetras, 0);
+  end;
+
+  function Buscar(letra: string) : RLetra;
+  var
+    vLetra : RLetra;
+  begin
+    Result.letra := '';
+
+    for vLetra in gLetras do
+    begin
+      if (vLetra.letra = letra) then
+      begin
+        Result := vLetra;
+        Exit;
+      end;
+    end;
+  end;
+
+  procedure Adicionar(letra: string);
+  var
+    vLetra : RLetra;
+  begin
+    vLetra := Buscar(letra);
+    if (vLetra.letra <> '') then
+    begin
+      inc(vLetra.qtde);
+      exit;
+    end;
+
+    vLetra.letra := letra;
+    vLetra.qtde := 1;
+    SetLength(gLetras, High(gLetras) + 1);
+    gLetras[High(gLetras) + 1] := vLetra;
+  end;
+
+procedure TForm1.Button1Click(Sender: TObject);
+var
+  vLetraRec : RLetra;
+  vList : TStringList;
+  vLine : String;
+  vChar : Char;
+  vTotal, vPerc : Real;
+  I: Integer;
+begin
+  vList := TStringList.Create;
+  vList.LoadFromFile('Conteudo.txt');
+
+  limpar();
+
+  for vLine in vList do
+  begin
+    for vChar in vLine do
+    begin
+      if (vChar in ['a'..'z', 'A'..'Z']) then
+      begin
+        Adicionar(LowerCase(vChar));
+      end;
+    end;
+  end;
+
+  vTotal := 0;
+
+  for vLetraRec in gLetras do
+  begin
+    vTotal := vTotal + vLetraRec.qtde;
+  end;
+
+  vList.Clear;
+
+  for vLetraRec in gLetras do
+  begin
+    vPerc := vLetraRec.qtde / vTotal * 100;
+    vList.Add('"' + vLetraRec.letra + '" = ' + FormatFloat('0.00', vPerc) + '%');
+  end;
+
+  vList.Sort;
+
+  Me
+
+  vList.Free;
+end;
+
+end.
